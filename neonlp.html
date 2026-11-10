@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=1440"><title>NeoNLP — Usulan Desain</title>
+<html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><title>NeoNLP — Usulan Desain</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{--wine:#7a0f1c;--crim:#b3172a;--night:#120a0d;--night2:#1d1115;--silver:#c9ccd3;--bone:#f5f1ec;--ink:#1c1416;--mut:#6e6366;--line:#e4dcd6}
@@ -60,10 +60,61 @@ h2{font-size:52px;line-height:1.04;margin-top:14px;max-width:680px}
 .r .dt{font-family:"Cormorant Garamond";font-size:30px;font-weight:600}.r h4{font-size:27px}.r small{color:#a89a9d;font-size:14px;font-family:Manrope}
 .r .btn{text-align:center;padding:12px 0}
 footer{background:#0b0608;color:#8c7f82;font-size:14px;padding:34px 0}footer .w{display:flex;justify-content:space-between}
+:root{--navbg:var(--night)}
+/* ---- responsive + interaction layer ---- */
+html{scroll-behavior:smooth}
+body{width:auto;overflow-x:hidden}
+.w{width:min(1200px,100% - 40px)}
+a{color:inherit;text-decoration:none}
+[id]{scroll-margin-top:96px}
+header{position:sticky;top:0;z-index:50;background:var(--navbg)}
+.btn{cursor:pointer;transition:transform .15s,box-shadow .15s,filter .15s}
+.btn:hover{transform:translateY(-2px);filter:brightness(1.06)}
+nav a{cursor:pointer;transition:opacity .15s}nav a:not(.btn):hover{opacity:.65}
+.link,.more,.go{cursor:pointer}
+.burger{display:none;width:44px;height:44px;border:0;background:none;cursor:pointer;padding:10px;color:inherit}
+.burger i{display:block;height:2px;background:currentColor;margin:6px 0;border-radius:2px;transition:.2s}
+.burger.open i:nth-child(1){transform:translateY(8px) rotate(45deg)}.burger.open i:nth-child(2){opacity:0}.burger.open i:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
+.js .rv{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}.js .rv.in{opacity:1;transform:none}
+@media(max-width:1020px){
+  .burger{display:block}
+  nav{display:none;position:absolute;left:0;right:0;top:100%;flex-direction:column;align-items:stretch;gap:0;padding:6px 20px 20px;background:var(--navbg);box-shadow:0 18px 30px rgba(0,0,0,.14)}
+  nav.open{display:flex}
+  nav a:not(.btn){padding:15px 0;border-bottom:1px solid rgba(128,128,128,.22);font-size:16px}
+  nav .btn{margin-top:14px;text-align:center}
+  section{padding:64px 0}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.js .rv{opacity:1;transform:none;transition:none}}
+
+header{color:#fff}
+.hero .strip .w{padding:0;gap:0;grid-template-columns:repeat(3,1fr)}
+@media(max-width:1020px){
+  .hero>.w{grid-template-columns:1fr;gap:20px;padding:56px 0 72px}
+  .hero h1{font-size:clamp(46px,11vw,82px)}
+  .em{height:360px}.em .ring{width:320px;height:320px}.em .ring.b{width:440px;height:440px}
+  .cta{flex-wrap:wrap}
+  h2{font-size:clamp(34px,7vw,52px)}
+  .head{flex-direction:column;align-items:flex-start;gap:14px}
+  .kn{grid-template-columns:1fr 1fr}.a.f{grid-column:1/-1}
+  .p3{grid-template-columns:1fr}.p{border-right:0;border-bottom:1px solid var(--line)}.p:last-child{border-bottom:0}
+  .dir{grid-template-columns:1fr;gap:36px}
+  footer .w{flex-direction:column;gap:10px}
+}
+@media(max-width:680px){
+  header .w{height:74px}.logo b{font-size:22px}.logo small{display:none}
+  .hero{margin-top:-74px;padding-top:74px}
+  .hero .strip .w{grid-template-columns:1fr}.strip .w>div{border-right:0;border-bottom:1px solid rgba(255,255,255,.08);padding:22px 4px}
+  .em{height:300px}.bigs{transform:scale(.82)}.rib{bottom:58px}
+  .kn,.ppl{grid-template-columns:1fr}.a.f .im{height:200px}.a.f h3{font-size:30px}
+  .p{padding:30px 26px}
+  .r{grid-template-columns:1fr auto;grid-template-areas:"a a" "b b" "c d";row-gap:8px}
+  .r>:nth-child(1){grid-area:a}.r>:nth-child(2){grid-area:b}.r>:nth-child(3){grid-area:c;align-self:center}.r>:nth-child(4){grid-area:d;padding:12px 26px}
+  .r .dt{font-size:22px;color:#e2475a}
+}
 </style></head><body>
 <header class="dark"><div class="w">
   <div class="logo"><div class="shield">N</div><div><b>Neo<i>NLP</i> Society</b><small>Now Everyone Can Learn NLP</small></div></div>
-  <nav><span>Tentang NeoNLP</span><span>Belajar NLP</span><span>Praktisi</span><span>Trainer</span><span>Jadwal Pelatihan</span><span>Blog</span><span class="btn sil">Login</span></nav>
+  <button class="burger" aria-label="Menu" aria-expanded="false"><i></i><i></i><i></i></button><nav><a href="#tentang">Tentang NeoNLP</a><a href="#blog">Belajar NLP</a><a href="#direktori">Praktisi</a><a href="#direktori">Trainer</a><a href="#jadwal">Jadwal Pelatihan</a><a href="#blog">Blog</a><a href="#" class="btn sil">Login</a></nav>
 </div></header>
 
 <div class="hero dark"><div class="w">
@@ -71,7 +122,7 @@ footer{background:#0b0608;color:#8c7f82;font-size:14px;padding:34px 0}footer .w{
     <div class="eyebrow" style="color:#e2475a">Organisasi NLP independen terbesar di Indonesia</div>
     <h1>Now everyone can learn <em>NLP.</em></h1>
     <p>Pusat pengetahuan NLP berbahasa Indonesia — untuk Anda yang ingin memahami NLP, menjadi praktisi, atau menapaki karier baru sebagai trainer.</p>
-    <div class="cta"><span class="btn crim">MULAI BELAJAR NLP</span><span class="btn sil">LIHAT JADWAL PELATIHAN</span></div>
+    <div class="cta"><a href="#jadwal" class="btn crim">MULAI BELAJAR NLP</a><a href="#jadwal" class="btn sil">LIHAT JADWAL PELATIHAN</a></div>
   </div>
   <div class="em"><div class="ring b"></div><div class="ring"></div><div class="bigs">Neo<br>NLP</div><div class="rib">Society</div></div>
 </div>
@@ -81,40 +132,47 @@ footer{background:#0b0608;color:#8c7f82;font-size:14px;padding:34px 0}footer .w{
   <div><b>Ajarkan</b><span>Jalur karier sebagai Trainer NLP</span></div>
 </div></div></div>
 
-<section><div class="w">
-  <div class="head"><div><div class="eyebrow">Pustaka NLP</div><h2>Referensi untuk siapa pun yang ingin memahami NLP</h2></div><span class="more">SEMUA ARTIKEL →</span></div>
+<section id="blog"><div class="w">
+  <div class="head"><div><div class="eyebrow">Pustaka NLP</div><h2>Referensi untuk siapa pun yang ingin memahami NLP</h2></div><a href="#" class="more">SEMUA ARTIKEL →</a></div>
   <div class="kn">
     <div class="a f"><div class="im"></div><div class="b"><span>Mulai dari sini</span><h3>Apa itu NLP dan bagaimana cara kerjanya?</h3><p>Pengantar singkat bagi pemula, dengan bahasa sehari-hari.</p><small>Bacaan 6 menit</small></div></div>
-    <div class="a"><div class="im" style="background:linear-gradient(140deg,#3b3f49,#14161b)"></div><div class="b"><span>Teknik</span><h3>Judul artikel dari blog yang sudah ada</h3><small>Bacaan 4 menit</small></div></div>
-    <div class="a"><div class="im" style="background:linear-gradient(140deg,#b3172a,#5e0d17)"></div><div class="b"><span>Karier</span><h3>Judul artikel dari blog yang sudah ada</h3><small>Bacaan 5 menit</small></div></div>
+    <div class="a"><div class="im" style="background:linear-gradient(140deg,#3b3f49,#14161b)"></div><div class="b"><span>Teknik</span><h3>Anchoring: memanggil kondisi terbaik Anda kapan saja</h3><small>Bacaan 4 menit</small></div></div>
+    <div class="a"><div class="im" style="background:linear-gradient(140deg,#b3172a,#5e0d17)"></div><div class="b"><span>Karier</span><h3>Langkah menjadi Trainer NLP dari nol</h3><small>Bacaan 5 menit</small></div></div>
   </div>
 </div></section>
 
-<section class="paths"><div class="w">
-  <div class="head"><div><div class="eyebrow">Jenjang</div><h2>Dari pembelajar menjadi trainer</h2></div><span class="more">LIHAT SEMUA JENJANG →</span></div>
+<section id="tentang" class="paths"><div class="w">
+  <div class="head"><div><div class="eyebrow">Jenjang</div><h2>Dari pembelajar menjadi trainer</h2></div><a href="#" class="more">LIHAT SEMUA JENJANG →</a></div>
   <div class="p3">
-    <div class="p"><div class="rn">I</div><h3>Pembelajar</h3><p>Pahami dasar NLP lewat artikel dan kelas pengantar.</p><span class="more">MULAI BELAJAR →</span></div>
-    <div class="p hi"><div class="rn">II</div><h3>Praktisi NLP</h3><p>Ikuti sertifikasi dan terdaftar resmi sebagai praktisi NeoNLP.</p><span class="more">LIHAT SYARAT →</span></div>
-    <div class="p"><div class="rn">III</div><h3>Trainer NLP</h3><p>Ajarkan NLP dan bangun karier baru sebagai trainer.</p><span class="more">LIHAT SYARAT →</span></div>
+    <div class="p"><div class="rn">I</div><h3>Pembelajar</h3><p>Pahami dasar NLP lewat artikel dan kelas pengantar.</p><a href="#" class="more">MULAI BELAJAR →</a></div>
+    <div class="p hi"><div class="rn">II</div><h3>Praktisi NLP</h3><p>Ikuti sertifikasi dan terdaftar resmi sebagai praktisi NeoNLP.</p><a href="#" class="more">LIHAT SYARAT →</a></div>
+    <div class="p"><div class="rn">III</div><h3>Trainer NLP</h3><p>Ajarkan NLP dan bangun karier baru sebagai trainer.</p><a href="#" class="more">LIHAT SYARAT →</a></div>
   </div>
 </div></section>
 
-<section><div class="w dir">
+<section id="direktori"><div class="w dir">
   <div><div class="eyebrow">Direktori</div><h2>Temukan praktisi dan trainer resmi</h2><p>Cari berdasarkan nama atau kota. Setiap profil terhubung langsung dengan data keanggotaan.</p>
-    <div class="box"><span>Nama, kota, atau nomor anggota</span><span class="btn crim">CARI</span></div></div>
+    <div class="box"><span>Nama, kota, atau nomor anggota</span><a href="#direktori" class="btn crim">CARI</a></div></div>
   <div class="ppl">
-    <div class="pp"><i></i><div><b>Nama Trainer</b><small>Jakarta</small></div><em>TRAINER</em></div>
-    <div class="pp"><i></i><div><b>Nama Praktisi</b><small>Surabaya</small></div><em>PRAKTISI</em></div>
-    <div class="pp"><i></i><div><b>Nama Praktisi</b><small>Bandung</small></div><em>PRAKTISI</em></div>
-    <div class="pp"><i></i><div><b>Nama Trainer</b><small>Denpasar</small></div><em>TRAINER</em></div>
+    <div class="pp"><i></i><div><b>Arif Wicaksono</b><small>Jakarta</small></div><em>TRAINER</em></div>
+    <div class="pp"><i></i><div><b>Maya Anggraini</b><small>Surabaya</small></div><em>PRAKTISI</em></div>
+    <div class="pp"><i></i><div><b>Dimas Prakoso</b><small>Bandung</small></div><em>PRAKTISI</em></div>
+    <div class="pp"><i></i><div><b>Ni Luh Ayu S.</b><small>Denpasar</small></div><em>TRAINER</em></div>
   </div>
 </div></section>
 
-<section class="sch"><div class="w">
-  <div class="head"><div><div class="eyebrow" style="color:#e2475a">Jadwal Pelatihan</div><h2>Kelas NLP terdekat</h2></div><span class="more" style="color:#e2475a">SEMUA JADWAL →</span></div>
-  <div class="r"><span class="dt">5–7 Des</span><div><h4>NLP Practitioner</h4><small>Bersama Trainer NeoNLP</small></div><small>Jakarta · Tatap muka</small><span class="btn crim">DAFTAR</span></div>
-  <div class="r"><span class="dt">16–18 Jan</span><div><h4>NLP Practitioner</h4><small>Bersama Trainer NeoNLP</small></div><small>Surabaya · Tatap muka</small><span class="btn sil">DAFTAR</span></div>
-  <div class="r"><span class="dt">13–15 Feb</span><div><h4>NLP Trainer Program</h4><small>Khusus praktisi tersertifikasi</small></div><small>Bandung · Tatap muka</small><span class="btn sil">DAFTAR</span></div>
+<section id="jadwal" class="sch"><div class="w">
+  <div class="head"><div><div class="eyebrow" style="color:#e2475a">Jadwal Pelatihan</div><h2>Kelas NLP terdekat</h2></div><a href="#" class="more" style="color:#e2475a">SEMUA JADWAL →</a></div>
+  <div class="r"><span class="dt">5–7 Des</span><div><h4>NLP Practitioner</h4><small>Bersama Trainer NeoNLP</small></div><small>Jakarta · Tatap muka</small><a href="#jadwal" class="btn crim">DAFTAR</a></div>
+  <div class="r"><span class="dt">16–18 Jan</span><div><h4>NLP Practitioner</h4><small>Bersama Trainer NeoNLP</small></div><small>Surabaya · Tatap muka</small><a href="#jadwal" class="btn sil">DAFTAR</a></div>
+  <div class="r"><span class="dt">13–15 Feb</span><div><h4>NLP Trainer Program</h4><small>Khusus praktisi tersertifikasi</small></div><small>Bandung · Tatap muka</small><a href="#jadwal" class="btn sil">DAFTAR</a></div>
 </div></section>
 <footer><div class="w"><span>© 2026 Neo NLP Society</span><span>Tentang NeoNLP · Praktisi · Trainer · Jadwal Pelatihan · Blog · Login</span></div></footer>
-</body></html>
+<script>
+document.documentElement.classList.add('js');
+const b=document.querySelector('.burger'),n=document.querySelector('nav');
+b.addEventListener('click',()=>{n.classList.toggle('open');b.classList.toggle('open');b.setAttribute('aria-expanded',n.classList.contains('open'))});
+n.addEventListener('click',e=>{if(e.target.closest('a')){n.classList.remove('open');b.classList.remove('open')}});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.08});
+document.querySelectorAll('section>.w>*, .rvx').forEach(el=>{el.classList.add('rv');io.observe(el)});
+</script></body></html>

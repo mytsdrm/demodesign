@@ -13,4 +13,4 @@ Static design mockups for four homepages: IBH Center, Hipnotis.net, NCA Center a
 3. Settings → Pages → Source: "Deploy from a branch" → branch `main`, folder `/ (root)` → Save.
 4. Open `https://<username>.github.io/<repository>/` after a minute or two.
 
-These are visual mockups only: buttons and menus do not work, and names, dates and photos are placeholders.
+These are responsive visual demos: menus and buttons only scroll within the page, search and registration do not work, and names, dates and article titles are sample data.

@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=1440"><title>IBH Center — Usulan Desain</title>
+<html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><title>IBH Center — Usulan Desain</title>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{--navy:#14213d;--navy2:#1d2f55;--red:#c8202f;--gold:#b8904a;--paper:#f7f4ee;--ink:#1b2233;--mut:#5f6880;--line:#e3ddd0}
@@ -69,11 +69,56 @@ section{padding:92px 0}
 footer{background:#0e1830;color:#9aa6c2;font-size:14px}footer .w{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:40px;padding:64px 0 40px}
 footer h5{color:#fff;font-size:14px;margin-bottom:16px}footer p{line-height:2}
 .copy{border-top:1px solid #1e2b4d;padding:20px 0;text-align:center;font-size:13px}
+:root{--navbg:#fff}
+/* ---- responsive + interaction layer ---- */
+html{scroll-behavior:smooth}
+body{width:auto;overflow-x:hidden}
+.w{width:min(1200px,100% - 40px)}
+a{color:inherit;text-decoration:none}
+[id]{scroll-margin-top:96px}
+header{position:sticky;top:0;z-index:50;background:var(--navbg)}
+.btn{cursor:pointer;transition:transform .15s,box-shadow .15s,filter .15s}
+.btn:hover{transform:translateY(-2px);filter:brightness(1.06)}
+nav a{cursor:pointer;transition:opacity .15s}nav a:not(.btn):hover{opacity:.65}
+.link,.more,.go{cursor:pointer}
+.burger{display:none;width:44px;height:44px;border:0;background:none;cursor:pointer;padding:10px;color:inherit}
+.burger i{display:block;height:2px;background:currentColor;margin:6px 0;border-radius:2px;transition:.2s}
+.burger.open i:nth-child(1){transform:translateY(8px) rotate(45deg)}.burger.open i:nth-child(2){opacity:0}.burger.open i:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
+.js .rv{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}.js .rv.in{opacity:1;transform:none}
+@media(max-width:1020px){
+  .burger{display:block}
+  nav{display:none;position:absolute;left:0;right:0;top:100%;flex-direction:column;align-items:stretch;gap:0;padding:6px 20px 20px;background:var(--navbg);box-shadow:0 18px 30px rgba(0,0,0,.14)}
+  nav.open{display:flex}
+  nav a:not(.btn){padding:15px 0;border-bottom:1px solid rgba(128,128,128,.22);font-size:16px}
+  nav .btn{margin-top:14px;text-align:center}
+  section{padding:64px 0}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.js .rv{opacity:1;transform:none;transition:none}}
+
+.field{cursor:text}
+@media(max-width:1020px){
+  .hero .w{grid-template-columns:1fr;gap:40px;padding:56px 0 120px}
+  .hero h1{font-size:clamp(36px,8vw,60px)}
+  .stats .w{grid-template-columns:1fr 1fr}.stat:nth-child(2){border-right:0}.stat:nth-child(-n+2){border-bottom:1px solid var(--line)}
+  .grid3,.two{grid-template-columns:1fr}
+  .head{flex-direction:column;align-items:flex-start;gap:14px}.head h2{font-size:clamp(28px,6vw,40px)}
+  .renew .w{flex-direction:column;align-items:flex-start;gap:22px}.renew h2{font-size:28px}
+  footer .w{grid-template-columns:1fr 1fr}
+}
+@media(max-width:680px){
+  .top{display:none}header .w{height:70px}.logo small{display:none}
+  .cta{flex-wrap:wrap}.card-verify{padding:22px}
+  .stat{padding:20px}.stat b{font-size:26px}
+  .row{grid-template-columns:84px 1fr;grid-template-areas:"d t" "d g" "d s" "b b";row-gap:8px}
+  .row>:nth-child(1){grid-area:d;align-self:start}.row>:nth-child(2){grid-area:t}.row>:nth-child(3){grid-area:g}.row>:nth-child(4){grid-area:s}.row>:nth-child(5){grid-area:b;margin-top:8px}
+  .trib{flex-direction:column;align-items:flex-start;padding:28px}.toy{padding:28px}.toy>div:last-child{flex-wrap:wrap;gap:16px}
+  .r>:nth-child(3){padding-right:2px}
+}
 </style></head><body>
 <div class="top"><div class="w"><span>Organisasi hipnoterapi pertama di Indonesia · Berdiri sejak 2002</span><span>Bantuan Member · Kontak</span></div></div>
 <header><div class="w">
   <div class="logo"><div class="seal">IBH</div><div><b>IBH Center</b><small>The Indonesian Board of Hypnotherapy</small></div></div>
-  <nav><span>Tentang IBH</span><span>Cari Hipnoterapis</span><span>Jadwal Pelatihan</span><span>Blog</span><span>Renewal</span><span class="login">Login Member</span></nav>
+  <button class="burger" aria-label="Menu" aria-expanded="false"><i></i><i></i><i></i></button><nav><a href="#tentang">Tentang IBH</a><a href="#direktori">Cari Hipnoterapis</a><a href="#jadwal">Jadwal Pelatihan</a><a href="#blog">Blog</a><a href="#renewal">Renewal</a><a href="#" class="login">Login Member</a></nav>
 </div></header>
 
 <div class="hero"><div class="w">
@@ -81,15 +126,15 @@ footer h5{color:#fff;font-size:14px;margin-bottom:16px}footer p{line-height:2}
     <div class="eyebrow">Website Resmi IBH</div>
     <h1>Standar profesi <em>hipnoterapi</em> Indonesia sejak 2002.</h1>
     <p>IBH menaungi hipnoterapis bersertifikat di berbagai wilayah Indonesia dan mancanegara. Temukan praktisi terpercaya, atau mulai perjalanan Anda menjadi hipnoterapis.</p>
-    <div class="cta"><span class="btn red">Lihat Jadwal Pelatihan</span><span class="btn ghost">Tentang IBH</span></div>
+    <div class="cta"><a href="#jadwal" class="btn red">Lihat Jadwal Pelatihan</a><a href="#jadwal" class="btn ghost">Tentang IBH</a></div>
   </div>
-  <div class="card-verify">
+  <div class="card-verify" id="direktori">
     <div class="eyebrow">Verifikasi Member</div>
     <h3 style="margin-top:8px">Cari hipnoterapis bersertifikat</h3>
     <p>Pastikan terapis Anda terdaftar resmi sebagai anggota IBH.</p>
     <div class="field">Nama atau nomor member</div>
     <div class="field"><span>Semua kota</span><span>▾</span></div>
-    <span class="btn">Cari Sekarang</span>
+    <a href="#direktori" class="btn">Cari Sekarang</a>
     <div class="vr"><span class="dot"></span>Data member diperbarui otomatis dari sistem keanggotaan</div>
   </div>
 </div></div>
@@ -101,27 +146,34 @@ footer h5{color:#fff;font-size:14px;margin-bottom:16px}footer p{line-height:2}
   <div class="stat"><b>Global</b><span>Anggota di beberapa negara</span></div>
 </div></div>
 
-<section><div class="w">
-  <div class="head"><div><div class="eyebrow">Jalur Sertifikasi</div><h2>Tiga jenjang untuk menjadi hipnoterapis profesional</h2></div><span class="link">Pelajari jenjang sertifikasi →</span></div>
+<section id="tentang"><div class="w">
+  <div class="head"><div><div class="eyebrow">Jalur Sertifikasi</div><h2>Tiga jenjang untuk menjadi hipnoterapis profesional</h2></div><a href="#" class="link">Pelajari jenjang sertifikasi →</a></div>
   <div class="grid3">
-    <div class="path"><div class="n">01</div><h3>Certified Hypnotist</h3><p>Dasar-dasar hipnosis dan komunikasi dengan pikiran bawah sadar.</p><span class="link">Lihat syarat →</span></div>
-    <div class="path"><div class="n">02</div><h3>Certified Hypnotherapist</h3><p>Keterampilan terapi untuk membantu klien secara aman dan beretika.</p><span class="link">Lihat syarat →</span></div>
-    <div class="path"><div class="n">03</div><h3>Certified Instructor</h3><p>Jenjang pengajar resmi IBH melalui Training of The Trainer (TTT).</p><span class="link">Lihat syarat →</span></div>
+    <div class="path"><div class="n">01</div><h3>Certified Hypnotist</h3><p>Dasar-dasar hipnosis dan komunikasi dengan pikiran bawah sadar.</p><a href="#" class="link">Lihat syarat →</a></div>
+    <div class="path"><div class="n">02</div><h3>Certified Hypnotherapist</h3><p>Keterampilan terapi untuk membantu klien secara aman dan beretika.</p><a href="#" class="link">Lihat syarat →</a></div>
+    <div class="path"><div class="n">03</div><h3>Certified Instructor</h3><p>Jenjang pengajar resmi IBH melalui Training of The Trainer (TTT).</p><a href="#" class="link">Lihat syarat →</a></div>
   </div>
 </div></section>
 
-<section class="sched"><div class="w">
-  <div class="head"><div><div class="eyebrow">Jadwal Pelatihan</div><h2>Pelatihan resmi terdekat</h2></div><span class="link">Semua jadwal →</span></div>
-  <div class="row"><div class="date"><b>12</b><span>Des</span></div><div><h4>Basic Hypnotherapy</h4><small>Bersama Certified Instructor IBH</small></div><span class="tag">Jakarta</span><small>2 hari · Tatap muka</small><span class="btn">Daftar</span></div>
-  <div class="row"><div class="date"><b>19</b><span>Des</span></div><div><h4>Advanced Hypnotherapy</h4><small>Bersama Certified Instructor IBH</small></div><span class="tag">Surabaya</span><small>2 hari · Tatap muka</small><span class="btn">Daftar</span></div>
-  <div class="row" style="border:0"><div class="date"><b>09</b><span>Jan</span></div><div><h4>Training of The Trainer (TTT)</h4><small>Khusus Certified Hypnotherapist</small></div><span class="tag">Bandung</span><small>3 hari · Tatap muka</small><span class="btn">Daftar</span></div>
+<section id="jadwal" class="sched"><div class="w">
+  <div class="head"><div><div class="eyebrow">Jadwal Pelatihan</div><h2>Pelatihan resmi terdekat</h2></div><a href="#" class="link">Semua jadwal →</a></div>
+  <div class="row"><div class="date"><b>12</b><span>Des</span></div><div><h4>Basic Hypnotherapy</h4><small>Bersama Certified Instructor IBH</small></div><span class="tag">Jakarta</span><small>2 hari · Tatap muka</small><a href="#jadwal" class="btn">Daftar</a></div>
+  <div class="row"><div class="date"><b>19</b><span>Des</span></div><div><h4>Advanced Hypnotherapy</h4><small>Bersama Certified Instructor IBH</small></div><span class="tag">Surabaya</span><small>2 hari · Tatap muka</small><a href="#jadwal" class="btn">Daftar</a></div>
+  <div class="row" style="border:0"><div class="date"><b>09</b><span>Jan</span></div><div><h4>Training of The Trainer (TTT)</h4><small>Khusus Certified Hypnotherapist</small></div><span class="tag">Bandung</span><small>3 hari · Tatap muka</small><a href="#jadwal" class="btn">Daftar</a></div>
 </div></section>
 
 <section><div class="w two">
-  <div class="trib"><div class="ph">FOTO</div><div><div class="eyebrow">In Memoriam</div><h3>Yan Nurindra</h3><p>Pendiri The Indonesian Board of Hypnotherapy. Warisan beliau terus hidup melalui para praktisi IBH.</p></div></div>
-  <div class="toy"><div class="eyebrow">Penghargaan</div><h3>IBH Trainer of The Year</h3><p>Anugerah tahunan bagi Certified Instructor dengan jumlah alumni terbanyak.</p><div style="display:flex;justify-content:space-between;align-items:center"><div class="av"><i></i><i></i><i></i><i></i><i></i></div><span class="link">Lihat para penerima →</span></div></div>
+  <div class="trib"><div class="ph" style="font-family:Fraunces,serif;font-size:40px;color:#c9a35e;letter-spacing:0">YN</div><div><div class="eyebrow">In Memoriam</div><h3>Yan Nurindra</h3><p>Pendiri The Indonesian Board of Hypnotherapy. Warisan beliau terus hidup melalui para praktisi IBH.</p></div></div>
+  <div class="toy"><div class="eyebrow">Penghargaan</div><h3>IBH Trainer of The Year</h3><p>Anugerah tahunan bagi Certified Instructor dengan jumlah alumni terbanyak.</p><div style="display:flex;justify-content:space-between;align-items:center"><div class="av"><i></i><i></i><i></i><i></i><i></i></div><a href="#" class="link">Lihat para penerima →</a></div></div>
 </div></section>
 
-<div class="renew"><div class="w"><div><h2>Masa keanggotaan hampir habis?</h2><p>Perpanjang secara online dalam beberapa menit, tanpa formulir kertas.</p></div><span class="btn">Renewal Keanggotaan</span></div></div>
+<div class="renew" id="renewal"><div class="w"><div><h2>Masa keanggotaan hampir habis?</h2><p>Perpanjang secara online dalam beberapa menit, tanpa formulir kertas.</p></div><a href="#jadwal" class="btn">Renewal Keanggotaan</a></div></div>
 <footer><div class="w"><div><div class="logo"><div class="seal">IBH</div><div><b style="color:#fff">IBH Center</b><small>Established 2002</small></div></div></div><div><h5>Organisasi</h5><p>Tentang IBH<br>Kode Etik<br>Chapter Daerah</p></div><div><h5>Member</h5><p>Login<br>Renewal<br>Cari Hipnoterapis</p></div><div><h5>Belajar</h5><p>Jadwal Pelatihan<br>Blog<br>Unduhan</p></div></div><div class="copy">© 2026 The Indonesian Board of Hypnotherapy</div></footer>
-</body></html>
+<script>
+document.documentElement.classList.add('js');
+const b=document.querySelector('.burger'),n=document.querySelector('nav');
+b.addEventListener('click',()=>{n.classList.toggle('open');b.classList.toggle('open');b.setAttribute('aria-expanded',n.classList.contains('open'))});
+n.addEventListener('click',e=>{if(e.target.closest('a')){n.classList.remove('open');b.classList.remove('open')}});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.08});
+document.querySelectorAll('section>.w>*, .rvx').forEach(el=>{el.classList.add('rv');io.observe(el)});
+</script></body></html>
