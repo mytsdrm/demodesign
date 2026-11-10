@@ -95,7 +95,7 @@ nav a:not(.btn):not(.login):hover:after,nav a.active:after{right:0}
   section{padding:64px 0}
 }
 @keyframes navin{from{opacity:0;transform:translateY(-8px)}}
-@media(prefers-reduced-motion:reduce){body,nav.open a{animation:none}.js .rv{opacity:1;transform:none;transition:none}}
+@media(prefers-reduced-motion:reduce){body,nav.open a{animation:none}nav,body{transition:none}.js .rv{opacity:1;transform:none;transition:none}}
 
 header{color:#fff}
 .hero .strip .w{padding:0;gap:0;grid-template-columns:repeat(3,1fr)}
@@ -185,9 +185,12 @@ const b=document.querySelector('.burger'),n=document.querySelector('nav');
 b.addEventListener('click',()=>{n.classList.toggle('open');b.classList.toggle('open');b.setAttribute('aria-expanded',n.classList.contains('open'))});
 const close=()=>{n.classList.remove('open');b.classList.remove('open');b.setAttribute('aria-expanded',false)};
 const calm=matchMedia('(prefers-reduced-motion:reduce)').matches, ease=t=>t<.5?4*t*t*t:1-Math.pow(-2*t+2,3)/2;
-let raf;function glide(y){cancelAnimationFrame(raf);y=Math.max(0,Math.min(y,document.documentElement.scrollHeight-innerHeight));if(calm)return scrollTo(0,y);
-  const s0=scrollY,d=y-s0,T=Math.min(1200,Math.max(550,Math.abs(d)*.45));let t0;raf=requestAnimationFrame(function f(t){t0??=t;const p=Math.min(1,(t-t0)/T);scrollTo(0,s0+d*ease(p));if(p<1)raf=requestAnimationFrame(f)})}
-addEventListener('wheel',()=>cancelAnimationFrame(raf),{passive:true});addEventListener('touchstart',()=>cancelAnimationFrame(raf),{passive:true});
+let raf,fin;const halt=()=>{cancelAnimationFrame(raf);clearTimeout(fin)};
+function glide(y){halt();y=Math.max(0,Math.min(y,document.documentElement.scrollHeight-innerHeight));if(calm)return scrollTo(0,y);
+  const s0=scrollY,d=y-s0,T=Math.min(1200,Math.max(550,Math.abs(d)*.45)),t0=performance.now();
+  const f=()=>{const p=Math.min(1,(performance.now()-t0)/T);scrollTo(0,s0+d*ease(p));if(p<1)raf=requestAnimationFrame(f);else clearTimeout(fin)};raf=requestAnimationFrame(f);
+  fin=setTimeout(()=>{cancelAnimationFrame(raf);scrollTo(0,y)},T+250)}
+addEventListener('wheel',halt,{passive:true});addEventListener('touchstart',halt,{passive:true});
 document.addEventListener('click',e=>{const a=e.target.closest('a');if(!a)return;const h=a.getAttribute('href')||'';
   if(h.startsWith('#')){e.preventDefault();const el=h.length>1&&document.getElementById(h.slice(1));const wasOpen=n.classList.contains('open');close();if(!el)return;
     setTimeout(()=>{glide(el.getBoundingClientRect().top+scrollY-document.querySelector('header').offsetHeight-14);el.classList.remove('hit');void el.offsetWidth;el.classList.add('hit')},wasOpen?180:0);history.replaceState(null,'',h)}
