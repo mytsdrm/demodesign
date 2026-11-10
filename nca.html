@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=1440"><title>NCA Center — Usulan Desain</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--red:#e0392b;--soft:#fff1ee;--ink:#17202a;--mut:#617080;--line:#e6eaee;--bg:#ffffff;--tint:#f6f8fa;--teal:#0f766e}
+*{box-sizing:border-box;margin:0}
+body{width:1440px;font-family:"Plus Jakarta Sans",sans-serif;color:var(--ink);background:var(--bg);-webkit-font-smoothing:antialiased}
+.w{width:1200px;margin:0 auto}
+h1,h2,h3,h4{letter-spacing:-.03em;font-weight:800}
+.btn{display:inline-block;padding:15px 26px;border-radius:12px;font-weight:700;font-size:15px}
+.red{background:var(--red);color:#fff}.out{border:1.5px solid var(--line);color:var(--ink);background:#fff}
+.eyebrow{display:inline-block;font-size:13px;font-weight:700;color:var(--red);background:var(--soft);padding:7px 14px;border-radius:99px}
+header .w{display:flex;justify-content:space-between;align-items:center;height:86px}
+.logo{display:flex;gap:12px;align-items:center;font-weight:800;font-size:19px}
+.mark{width:46px;height:46px;border-radius:50%;background:var(--red);color:#fff;display:grid;place-items:center;font-size:14px;font-weight:800;box-shadow:0 0 0 3px #fff,0 0 0 5px var(--red)}
+.logo small{display:block;font-size:12px;font-weight:500;color:var(--mut)}
+nav{display:flex;gap:30px;font-size:15px;font-weight:600;align-items:center;color:#34424f}nav .btn{padding:11px 20px;font-size:14px}
+.hero{background:radial-gradient(900px 500px at 85% 0%,#ffe3dd 0%,rgba(255,227,221,0) 70%)}
+.hero .w{display:grid;grid-template-columns:1fr 1fr;gap:64px;padding:64px 0 100px;align-items:center}
+.hero h1{font-size:64px;line-height:1.04;margin:22px 0}.hero h1 u{text-decoration:none;color:var(--red);position:relative}
+.hero h1 u:after{content:"";position:absolute;left:0;right:0;bottom:2px;height:10px;background:#ffd3cb;z-index:-1;border-radius:6px}
+.hero p{font-size:18px;line-height:1.65;color:var(--mut);max-width:520px}
+.cta{display:flex;gap:12px;margin-top:32px}
+.stack{position:relative;height:500px}
+.coach{position:absolute;background:#fff;border:1px solid var(--line);border-radius:20px;padding:20px;box-shadow:0 24px 50px rgba(23,32,42,.1);width:310px}
+.coach .top{display:flex;gap:14px;align-items:center}.coach i{width:56px;height:56px;border-radius:50%;background:#f3d9d4;flex:none}
+.coach b{font-size:16px;display:block}.coach small{font-size:13px;color:var(--mut)}
+.coach .tags{display:flex;gap:6px;margin-top:16px;flex-wrap:wrap}.coach .tags span{font-size:12px;font-weight:600;background:var(--tint);border-radius:8px;padding:5px 10px;color:#34424f}
+.ver{font-size:12px;font-weight:700;color:var(--teal);margin-top:14px;display:block}
+.c1{left:20px;top:10px}.c2{right:0;top:150px}.c3{left:70px;bottom:0}
+.blob{position:absolute;width:380px;height:380px;border-radius:50%;background:var(--red);opacity:.08;left:110px;top:60px}
+.search{margin-top:-46px;position:relative}
+.search .w{background:#fff;border:1px solid var(--line);border-radius:20px;box-shadow:0 20px 44px rgba(23,32,42,.08);padding:14px;display:grid;grid-template-columns:1.4fr 1fr 1fr 180px;gap:12px}
+.f{background:var(--tint);border-radius:12px;padding:14px 18px}.f small{display:block;font-size:12px;font-weight:700;color:var(--mut);margin-bottom:3px}.f span{font-size:15px;font-weight:600}
+.search .btn{display:grid;place-items:center}
+section{padding:96px 0}
+.center{text-align:center}.center h2{font-size:42px;margin:18px auto 14px;max-width:700px;line-height:1.1}.center p{color:var(--mut);font-size:17px;max-width:600px;margin:0 auto;line-height:1.6}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:48px}
+.kind{border-radius:24px;padding:40px;text-align:left}.k1{background:var(--soft)}.k2{background:#e9f5f3}
+.kind h3{font-size:28px;margin-bottom:10px}.kind p{font-size:16px;line-height:1.6;color:#44525f;margin:0 0 22px}
+.kind a{font-weight:700;font-size:15px}.k1 a{color:var(--red)}.k2 a{color:var(--teal)}
+.tint{background:var(--tint)}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:56px;position:relative}
+.steps:before{content:"";position:absolute;left:12%;right:12%;top:27px;border-top:2px dashed #cfd6dd}
+.st{text-align:center;padding:0 18px;position:relative}
+.st .n{width:56px;height:56px;border-radius:50%;background:#fff;border:2px solid var(--red);color:var(--red);font-weight:800;font-size:18px;display:grid;place-items:center;margin:0 auto 22px}
+.st.on .n{background:var(--red);color:#fff}
+.st h4{font-size:19px;margin-bottom:8px}.st p{font-size:14px;line-height:1.55;color:var(--mut)}
+.head{display:flex;justify-content:space-between;align-items:end;margin-bottom:36px}.head h2{font-size:38px;margin-top:16px}
+.more{font-weight:700;color:var(--red);font-size:15px}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.ev{border:1px solid var(--line);border-radius:20px;overflow:hidden;background:#fff}
+.ev .img{height:150px;background:linear-gradient(135deg,#ffd9d2,#ffeeea);position:relative}
+.ev .d{position:absolute;left:18px;top:18px;background:#fff;border-radius:12px;padding:8px 14px;font-weight:800;font-size:14px}
+.ev .b{padding:24px}.ev h4{font-size:19px;margin-bottom:8px}.ev small{color:var(--mut);font-size:14px;display:block;margin-bottom:18px}
+.ev .btn{padding:11px 18px;font-size:14px}
+.art{display:grid;grid-template-columns:1.3fr 1fr;gap:24px}
+.big{background:var(--ink);color:#fff;border-radius:22px;padding:40px;display:flex;flex-direction:column;justify-content:flex-end;min-height:330px}
+.big span,.sm span{font-size:12px;font-weight:700;color:var(--red);text-transform:uppercase;letter-spacing:.08em}
+.big h3{font-size:30px;margin-top:10px;line-height:1.15}
+.list{display:grid;gap:14px}.sm{border:1px solid var(--line);border-radius:18px;padding:24px;background:#fff}.sm h4{font-size:18px;margin-top:8px;font-weight:700}
+.join{background:var(--red);color:#fff;border-radius:28px;padding:60px;display:flex;justify-content:space-between;align-items:center;margin-bottom:90px}
+.join h2{font-size:38px;max-width:560px;line-height:1.1}.join p{margin-top:10px;color:#ffd6d1;font-size:17px}.join .btn{background:#fff;color:var(--red)}
+footer{border-top:1px solid var(--line);font-size:14px;color:var(--mut);padding:30px 0}footer .w{display:flex;justify-content:space-between}
+</style></head><body>
+<header><div class="w">
+  <div class="logo"><div class="mark">NCA</div><div>NLP Coach Association<small>Now Everyone Can Be a Coach</small></div></div>
+  <nav><span>Tentang NCA</span><span>Cari Coach</span><span>Trainer NCA</span><span>Jadwal Pelatihan</span><span>Blog</span><span class="btn out">Login</span><span class="btn red">Jadi Coach</span></nav>
+</div></header>
+
+<div class="hero"><div class="w">
+  <div>
+    <span class="eyebrow">Organisasi coach independen Indonesia</span>
+    <h1>Now, everyone can be a <u>coach</u>.</h1>
+    <p>NCA membantu Anda belajar coaching dengan cara yang mudah, efektif, dan efisien — dengan standar yang berlaku di dunia coaching global.</p>
+    <div class="cta"><span class="btn red">Mulai Jadi Coach</span><span class="btn out">Cari Coach untuk Saya</span></div>
+  </div>
+  <div class="stack"><div class="blob"></div>
+    <div class="coach c1"><div class="top"><i></i><div><b>Nama Coach</b><small>Life Coach · Jakarta</small></div></div><div class="tags"><span>Karier</span><span>Pengembangan diri</span></div><span class="ver">✓ Coach terdaftar NCA</span></div>
+    <div class="coach c2"><div class="top"><i style="background:#d2e9e5"></i><div><b>Nama Coach</b><small>Business Coach · Surabaya</small></div></div><div class="tags"><span>UMKM</span><span>Kepemimpinan</span></div><span class="ver">✓ Coach terdaftar NCA</span></div>
+    <div class="coach c3"><div class="top"><i style="background:#e6e0f3"></i><div><b>Nama Trainer</b><small>Trainer NCA · Bandung</small></div></div><div class="tags"><span>Sertifikasi Coach</span></div><span class="ver">✓ Trainer resmi NCA</span></div>
+  </div>
+</div></div>
+
+<div class="search"><div class="w">
+  <div class="f"><small>Cari coach</small><span>Nama atau keahlian</span></div>
+  <div class="f"><small>Jenis</small><span>Life Coach ▾</span></div>
+  <div class="f"><small>Kota</small><span>Semua kota ▾</span></div>
+  <span class="btn red">Cari Coach</span>
+</div></div>
+
+<section><div class="w center">
+  <span class="eyebrow">Dua jalur coaching</span>
+  <h2>Pilih arah yang sesuai dengan tujuan Anda</h2>
+  <p>Situs ini menjadi pintu masuk bagi siapa pun yang ingin menekuni dunia coaching.</p>
+  <div class="g2">
+    <div class="kind k1"><h3>Life Coach</h3><p>Dampingi orang lain membangun karakter, menemukan arah hidup, dan memberdayakan diri.</p><a>Pelajari Life Coaching →</a></div>
+    <div class="kind k2"><h3>Business Coach</h3><p>Bantu pemilik usaha dan profesional mencapai target bisnis dan kepemimpinan.</p><a>Pelajari Business Coaching →</a></div>
+  </div>
+</div></section>
+
+<section class="tint"><div class="w center">
+  <span class="eyebrow">Cara menjadi coach</span>
+  <h2>Empat langkah menuju coach terdaftar NCA</h2>
+  <div class="steps">
+    <div class="st on"><div class="n">1</div><h4>Pilih pelatihan</h4><p>Lihat jadwal dan pilih kota serta trainer yang sesuai.</p></div>
+    <div class="st"><div class="n">2</div><h4>Ikuti kelas</h4><p>Belajar coaching berbasis NLP bersama Trainer NCA.</p></div>
+    <div class="st"><div class="n">3</div><h4>Dapatkan sertifikat</h4><p>Lulus sesuai standar yang ditetapkan NCA.</p></div>
+    <div class="st"><div class="n">4</div><h4>Tampil di direktori</h4><p>Profil Anda muncul di halaman Cari Coach.</p></div>
+  </div>
+</div></section>
+
+<section><div class="w">
+  <div class="head"><div><span class="eyebrow">Jadwal pelatihan</span><h2>Kelas coaching terdekat</h2></div><span class="more">Semua jadwal →</span></div>
+  <div class="g3">
+    <div class="ev"><div class="img"><span class="d">6–7 Des</span></div><div class="b"><h4>NLP Coach Certification</h4><small>Jakarta · Bersama Trainer NCA</small><span class="btn red">Daftar</span></div></div>
+    <div class="ev"><div class="img" style="background:linear-gradient(135deg,#cfe9e5,#eaf6f4)"><span class="d">17–18 Jan</span></div><div class="b"><h4>Business Coaching</h4><small>Surabaya · Bersama Trainer NCA</small><span class="btn out">Daftar</span></div></div>
+    <div class="ev"><div class="img" style="background:linear-gradient(135deg,#e2dbf3,#f3f0fa)"><span class="d">7–8 Feb</span></div><div class="b"><h4>NLP Coach Certification</h4><small>Yogyakarta · Bersama Trainer NCA</small><span class="btn out">Daftar</span></div></div>
+  </div>
+</div></section>
+
+<section style="padding-top:0"><div class="w">
+  <div class="head"><div><span class="eyebrow">Blog</span><h2>Pengetahuan seputar coaching</h2></div><span class="more">Semua artikel →</span></div>
+  <div class="art">
+    <div class="big"><span>Dasar Coaching</span><h3>Apa bedanya coaching, mentoring, dan konseling?</h3></div>
+    <div class="list"><div class="sm"><span>Life Coach</span><h4>Judul artikel dari blog yang sudah ada</h4></div><div class="sm"><span>Business Coach</span><h4>Judul artikel dari blog yang sudah ada</h4></div><div class="sm"><span>NLP</span><h4>Judul artikel dari blog yang sudah ada</h4></div></div>
+  </div>
+</div></section>
+
+<div class="w"><div class="join"><div><h2>Siap memulai perjalanan sebagai coach?</h2><p>Bergabunglah dengan komunitas praktisi NLP Indonesia.</p></div><span class="btn">Lihat Jadwal Pelatihan</span></div></div>
+<footer><div class="w"><span>© 2026 NLP Coach Association (NCA)</span><span>Tentang NCA · Cari Coach · Trainer NCA · Jadwal · Blog · Login</span></div></footer>
+</body></html>

@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=1440"><title>IBH Center — Usulan Desain</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#14213d;--navy2:#1d2f55;--red:#c8202f;--gold:#b8904a;--paper:#f7f4ee;--ink:#1b2233;--mut:#5f6880;--line:#e3ddd0}
+*{box-sizing:border-box;margin:0}
+body{width:1440px;font-family:Inter,sans-serif;color:var(--ink);background:var(--paper);-webkit-font-smoothing:antialiased}
+.w{width:1200px;margin:0 auto}
+h1,h2,h3,.serif{font-family:Fraunces,serif;font-weight:600;letter-spacing:-.01em}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
+.btn{display:inline-block;padding:14px 26px;border-radius:6px;font-weight:600;font-size:15px}
+.red{background:var(--red);color:#fff}.ghost{border:1.5px solid rgba(255,255,255,.4);color:#fff}
+/* header */
+.top{background:var(--navy);color:#cfd6e6;font-size:13px}.top .w{display:flex;justify-content:space-between;padding:9px 0}
+header{background:#fff;border-bottom:1px solid var(--line)}
+header .w{display:flex;align-items:center;justify-content:space-between;height:84px}
+.logo{display:flex;align-items:center;gap:14px}
+.seal{width:52px;height:52px;border-radius:50%;background:var(--navy);border:3px solid var(--red);outline:2px solid var(--navy);color:#fff;display:grid;place-items:center;font-family:Fraunces,serif;font-weight:600;font-size:17px}
+.logo b{font-family:Fraunces,serif;font-size:20px;display:block;line-height:1.1}.logo small{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--mut)}
+nav{display:flex;gap:30px;font-size:15px;font-weight:500;align-items:center}
+nav .login{padding:10px 20px;border:1.5px solid var(--navy);border-radius:6px;font-weight:600}
+/* hero */
+.hero{background:linear-gradient(135deg,var(--navy) 0%,var(--navy2) 100%);color:#fff;position:relative;overflow:hidden}
+.hero:after{content:"";position:absolute;right:-180px;top:-140px;width:720px;height:720px;border-radius:50%;border:1px solid rgba(184,144,74,.35);box-shadow:0 0 0 60px rgba(184,144,74,.06),0 0 0 130px rgba(184,144,74,.04)}
+.hero .w{display:grid;grid-template-columns:1.15fr .85fr;gap:60px;padding:88px 0 150px;position:relative;z-index:1}
+.hero h1{font-size:60px;line-height:1.06;margin:18px 0 22px}
+.hero h1 em{font-style:italic;color:#e9c98b}
+.hero p{font-size:18px;line-height:1.65;color:#c9d1e3;max-width:540px}
+.cta{display:flex;gap:14px;margin-top:34px}
+.card-verify{background:#fff;color:var(--ink);border-radius:14px;padding:30px;box-shadow:0 30px 60px rgba(0,0,0,.3);align-self:center}
+.card-verify h3{font-size:22px;margin-bottom:6px}.card-verify p{font-size:14px;color:var(--mut);line-height:1.5;margin-bottom:18px}
+.field{border:1.5px solid var(--line);border-radius:8px;padding:14px 16px;font-size:15px;color:#9aa1b3;margin-bottom:10px;display:flex;justify-content:space-between}
+.card-verify .btn{width:100%;text-align:center;background:var(--navy);color:#fff;margin-top:6px}
+.vr{display:flex;align-items:center;gap:10px;margin-top:16px;font-size:13px;color:var(--mut)}.dot{width:8px;height:8px;border-radius:50%;background:#2e9d6a}
+/* stats */
+.stats{margin-top:-64px;position:relative;z-index:2}
+.stats .w{background:#fff;border-radius:14px;border:1px solid var(--line);display:grid;grid-template-columns:repeat(4,1fr);box-shadow:0 12px 30px rgba(20,33,61,.08)}
+.stat{padding:30px 34px;border-right:1px solid var(--line)}.stat:last-child{border:0}
+.stat b{font-family:Fraunces,serif;font-size:34px;color:var(--navy);display:block}.stat span{font-size:14px;color:var(--mut)}
+section{padding:92px 0}
+.head{display:flex;justify-content:space-between;align-items:end;margin-bottom:40px}
+.head h2{font-size:40px;margin-top:10px;max-width:640px;line-height:1.12}
+.link{font-weight:600;color:var(--red);font-size:15px}
+/* paths */
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.path{background:#fff;border:1px solid var(--line);border-radius:14px;padding:32px}
+.path .n{font-family:Fraunces,serif;font-size:15px;color:var(--gold);border:1px solid var(--gold);width:38px;height:38px;border-radius:50%;display:grid;place-items:center;margin-bottom:22px}
+.path h3{font-size:23px;margin-bottom:10px}.path p{font-size:15px;line-height:1.6;color:var(--mut);margin-bottom:20px}
+/* schedule */
+.sched{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.row{display:grid;grid-template-columns:110px 1fr 180px 150px 150px;align-items:center;padding:22px 0;border-bottom:1px solid var(--line);gap:20px}
+.date{text-align:center;border:1px solid var(--line);border-radius:10px;padding:10px 0;width:84px}
+.date b{font-family:Fraunces,serif;font-size:26px;display:block;color:var(--navy)}.date span{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--red);font-weight:700}
+.row h4{font-size:18px;font-weight:600;margin-bottom:4px}.row small{color:var(--mut);font-size:14px}
+.tag{font-size:12px;font-weight:600;padding:6px 12px;border-radius:99px;background:#eef1f8;color:var(--navy);justify-self:start}
+.row .btn{padding:11px 0;text-align:center;border:1.5px solid var(--navy);color:var(--navy);font-size:14px}
+/* tribute */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.trib{background:var(--navy);color:#fff;border-radius:16px;padding:44px;display:flex;gap:28px;align-items:center}
+.ph{width:130px;height:160px;border-radius:10px;background:linear-gradient(160deg,#33456f,#1a2947);flex:none;display:grid;place-items:center;font-size:11px;color:#8fa0c6;letter-spacing:.1em}
+.trib h3{font-size:28px;margin:8px 0 10px}.trib p{font-size:15px;line-height:1.6;color:#c9d1e3}
+.toy{background:#fff;border:1px solid var(--line);border-radius:16px;padding:44px}
+.toy h3{font-size:28px;margin:8px 0 10px}.toy p{font-size:15px;line-height:1.6;color:var(--mut);margin-bottom:22px}
+.av{display:flex}.av i{width:46px;height:46px;border-radius:50%;background:#d9d3c4;border:3px solid #fff;margin-right:-10px}
+/* renew */
+.renew{background:var(--red);color:#fff}.renew .w{display:flex;justify-content:space-between;align-items:center;padding:56px 0}
+.renew h2{font-size:34px}.renew p{margin-top:8px;color:#ffd9dc;font-size:16px}
+.renew .btn{background:#fff;color:var(--red)}
+footer{background:#0e1830;color:#9aa6c2;font-size:14px}footer .w{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:40px;padding:64px 0 40px}
+footer h5{color:#fff;font-size:14px;margin-bottom:16px}footer p{line-height:2}
+.copy{border-top:1px solid #1e2b4d;padding:20px 0;text-align:center;font-size:13px}
+</style></head><body>
+<div class="top"><div class="w"><span>Organisasi hipnoterapi pertama di Indonesia · Berdiri sejak 2002</span><span>Bantuan Member · Kontak</span></div></div>
+<header><div class="w">
+  <div class="logo"><div class="seal">IBH</div><div><b>IBH Center</b><small>The Indonesian Board of Hypnotherapy</small></div></div>
+  <nav><span>Tentang IBH</span><span>Cari Hipnoterapis</span><span>Jadwal Pelatihan</span><span>Blog</span><span>Renewal</span><span class="login">Login Member</span></nav>
+</div></header>
+
+<div class="hero"><div class="w">
+  <div>
+    <div class="eyebrow">Website Resmi IBH</div>
+    <h1>Standar profesi <em>hipnoterapi</em> Indonesia sejak 2002.</h1>
+    <p>IBH menaungi hipnoterapis bersertifikat di berbagai wilayah Indonesia dan mancanegara. Temukan praktisi terpercaya, atau mulai perjalanan Anda menjadi hipnoterapis.</p>
+    <div class="cta"><span class="btn red">Lihat Jadwal Pelatihan</span><span class="btn ghost">Tentang IBH</span></div>
+  </div>
+  <div class="card-verify">
+    <div class="eyebrow">Verifikasi Member</div>
+    <h3 style="margin-top:8px">Cari hipnoterapis bersertifikat</h3>
+    <p>Pastikan terapis Anda terdaftar resmi sebagai anggota IBH.</p>
+    <div class="field">Nama atau nomor member</div>
+    <div class="field"><span>Semua kota</span><span>▾</span></div>
+    <span class="btn">Cari Sekarang</span>
+    <div class="vr"><span class="dot"></span>Data member diperbarui otomatis dari sistem keanggotaan</div>
+  </div>
+</div></div>
+
+<div class="stats"><div class="w">
+  <div class="stat"><b>2002</b><span>Tahun berdiri</span></div>
+  <div class="stat"><b>Pertama</b><span>Organisasi hipnoterapi di Indonesia</span></div>
+  <div class="stat"><b>Nasional</b><span>Anggota di berbagai wilayah Indonesia</span></div>
+  <div class="stat"><b>Global</b><span>Anggota di beberapa negara</span></div>
+</div></div>
+
+<section><div class="w">
+  <div class="head"><div><div class="eyebrow">Jalur Sertifikasi</div><h2>Tiga jenjang untuk menjadi hipnoterapis profesional</h2></div><span class="link">Pelajari jenjang sertifikasi →</span></div>
+  <div class="grid3">
+    <div class="path"><div class="n">01</div><h3>Certified Hypnotist</h3><p>Dasar-dasar hipnosis dan komunikasi dengan pikiran bawah sadar.</p><span class="link">Lihat syarat →</span></div>
+    <div class="path"><div class="n">02</div><h3>Certified Hypnotherapist</h3><p>Keterampilan terapi untuk membantu klien secara aman dan beretika.</p><span class="link">Lihat syarat →</span></div>
+    <div class="path"><div class="n">03</div><h3>Certified Instructor</h3><p>Jenjang pengajar resmi IBH melalui Training of The Trainer (TTT).</p><span class="link">Lihat syarat →</span></div>
+  </div>
+</div></section>
+
+<section class="sched"><div class="w">
+  <div class="head"><div><div class="eyebrow">Jadwal Pelatihan</div><h2>Pelatihan resmi terdekat</h2></div><span class="link">Semua jadwal →</span></div>
+  <div class="row"><div class="date"><b>12</b><span>Des</span></div><div><h4>Basic Hypnotherapy</h4><small>Bersama Certified Instructor IBH</small></div><span class="tag">Jakarta</span><small>2 hari · Tatap muka</small><span class="btn">Daftar</span></div>
+  <div class="row"><div class="date"><b>19</b><span>Des</span></div><div><h4>Advanced Hypnotherapy</h4><small>Bersama Certified Instructor IBH</small></div><span class="tag">Surabaya</span><small>2 hari · Tatap muka</small><span class="btn">Daftar</span></div>
+  <div class="row" style="border:0"><div class="date"><b>09</b><span>Jan</span></div><div><h4>Training of The Trainer (TTT)</h4><small>Khusus Certified Hypnotherapist</small></div><span class="tag">Bandung</span><small>3 hari · Tatap muka</small><span class="btn">Daftar</span></div>
+</div></section>
+
+<section><div class="w two">
+  <div class="trib"><div class="ph">FOTO</div><div><div class="eyebrow">In Memoriam</div><h3>Yan Nurindra</h3><p>Pendiri The Indonesian Board of Hypnotherapy. Warisan beliau terus hidup melalui para praktisi IBH.</p></div></div>
+  <div class="toy"><div class="eyebrow">Penghargaan</div><h3>IBH Trainer of The Year</h3><p>Anugerah tahunan bagi Certified Instructor dengan jumlah alumni terbanyak.</p><div style="display:flex;justify-content:space-between;align-items:center"><div class="av"><i></i><i></i><i></i><i></i><i></i></div><span class="link">Lihat para penerima →</span></div></div>
+</div></section>
+
+<div class="renew"><div class="w"><div><h2>Masa keanggotaan hampir habis?</h2><p>Perpanjang secara online dalam beberapa menit, tanpa formulir kertas.</p></div><span class="btn">Renewal Keanggotaan</span></div></div>
+<footer><div class="w"><div><div class="logo"><div class="seal">IBH</div><div><b style="color:#fff">IBH Center</b><small>Established 2002</small></div></div></div><div><h5>Organisasi</h5><p>Tentang IBH<br>Kode Etik<br>Chapter Daerah</p></div><div><h5>Member</h5><p>Login<br>Renewal<br>Cari Hipnoterapis</p></div><div><h5>Belajar</h5><p>Jadwal Pelatihan<br>Blog<br>Unduhan</p></div></div><div class="copy">© 2026 The Indonesian Board of Hypnotherapy</div></footer>
+</body></html>

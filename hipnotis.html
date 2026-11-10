@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=1440"><title>Hipnotis.net — Usulan Desain</title>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--red:#d7263d;--dark:#15121a;--cream:#fbf6ee;--ink:#1a1620;--mut:#6b6472;--line:#ebe2d3;--yel:#ffc94a}
+*{box-sizing:border-box;margin:0}
+body{width:1440px;font-family:Inter,sans-serif;color:var(--ink);background:var(--cream);-webkit-font-smoothing:antialiased}
+.w{width:1200px;margin:0 auto}
+h1,h2,h3,h4,.d{font-family:Sora,sans-serif;letter-spacing:-.025em}
+.btn{display:inline-block;padding:17px 30px;border-radius:99px;font-weight:600;font-size:16px;font-family:Sora}
+.red{background:var(--red);color:#fff;box-shadow:0 10px 24px rgba(215,38,61,.3)}.line{border:1.5px solid var(--ink)}
+.eyebrow{font-family:Sora;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--red)}
+.bar{background:var(--dark);color:#fff;text-align:center;font-size:14px;padding:11px}.bar b{color:var(--yel)}
+header .w{display:flex;justify-content:space-between;align-items:center;height:88px}
+.logo{font-family:Sora;font-weight:800;font-size:24px}.logo i{color:var(--red);font-style:normal}
+.logo small{display:block;font-family:Inter;font-weight:500;font-size:11px;letter-spacing:.08em;color:var(--mut);text-transform:uppercase;margin-top:2px}
+nav{display:flex;gap:30px;font-size:15px;font-weight:500;align-items:center}nav .btn{padding:12px 22px;font-size:14px}
+.hero .w{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;padding:56px 0 96px;align-items:center}
+.hero h1{font-size:66px;line-height:1.02;font-weight:800;margin:20px 0 24px}.hero h1 span{color:var(--red)}
+.hero p{font-size:19px;line-height:1.6;color:var(--mut);max-width:560px}
+.cta{display:flex;gap:14px;margin:34px 0 28px;align-items:center}
+.trust{display:flex;gap:26px;font-size:14px;font-weight:500;color:var(--ink)}.trust span:before{content:"✓ ";color:var(--red);font-weight:700}
+.visual{position:relative;height:520px}
+.photo{position:absolute;inset:0 0 0 40px;border-radius:28px;background:linear-gradient(160deg,#2a2331,#15121a);display:grid;place-items:center;color:#5d5566;font-size:13px;letter-spacing:.14em;overflow:hidden}
+.photo:before{content:"";position:absolute;width:520px;height:520px;border-radius:50%;border:60px solid rgba(215,38,61,.18);right:-180px;top:-160px}
+.photo:after{content:"";position:absolute;width:300px;height:300px;border-radius:50%;background:rgba(255,201,74,.1);left:-90px;bottom:-110px}
+.badge{position:absolute;left:0;bottom:44px;background:#fff;border-radius:18px;padding:20px 22px;box-shadow:0 20px 44px rgba(21,18,26,.18);display:flex;gap:14px;align-items:center;width:300px}
+.badge .c{width:58px;height:58px;border-radius:50%;background:var(--yel);display:grid;place-items:center;font-family:Sora;font-weight:800;font-size:15px;flex:none}
+.badge b{font-family:Sora;font-size:15px;display:block}.badge small{color:var(--mut);font-size:13px}
+.chip{position:absolute;right:-14px;top:40px;background:var(--red);color:#fff;border-radius:14px;padding:14px 18px;font-family:Sora;font-weight:700;font-size:14px;transform:rotate(4deg)}
+section{padding:96px 0}
+h2{font-size:44px;line-height:1.08;font-weight:700;margin-top:12px;max-width:760px}
+.sub{font-size:17px;color:var(--mut);margin-top:14px;max-width:620px;line-height:1.6}
+/* careers */
+.dark{background:var(--dark);color:#fff}.dark .sub{color:#a79fb0}
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:48px}
+.car{background:#201b27;border:1px solid #322a3b;border-radius:20px;padding:28px}
+.car .ic{width:48px;height:48px;border-radius:14px;background:rgba(215,38,61,.18);color:#ff6b7d;display:grid;place-items:center;font-family:Sora;font-weight:700;margin-bottom:22px}
+.car h4{font-size:20px;margin-bottom:8px}.car p{font-size:14px;line-height:1.55;color:#a79fb0;min-height:66px}
+.car .amt{margin-top:20px;padding-top:18px;border-top:1px solid #322a3b;font-size:12px;color:#a79fb0}
+.car .amt b{display:block;font-family:Sora;font-size:19px;color:var(--yel);margin-top:4px}
+/* benefits */
+.ben{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px;align-items:start}
+.bl{display:grid;gap:14px}
+.bi{background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px 26px;display:flex;gap:20px;align-items:center}
+.bi .n{font-family:Sora;font-weight:800;font-size:26px;color:var(--red);width:40px}.bi b{font-family:Sora;font-size:17px;display:block;margin-bottom:3px}.bi small{font-size:14px;color:var(--mut)}
+.guar{background:var(--yel);border-radius:24px;padding:36px;margin-top:34px}
+.guar b{font-family:Sora;font-size:26px;font-weight:800;display:block;line-height:1.15}.guar p{margin-top:10px;font-size:15px;line-height:1.55}
+/* teachers + testi */
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:44px}
+.tc{background:#fff;border:1px solid var(--line);border-radius:22px;padding:30px;display:flex;gap:24px}
+.tc .p{width:120px;height:140px;border-radius:16px;background:#e8dfd0;flex:none;display:grid;place-items:center;font-size:11px;color:#a59a86;letter-spacing:.12em}
+.tc h4{font-size:22px;margin-bottom:10px}.tc li{font-size:14px;color:var(--mut);line-height:1.8;list-style:none}.tc li:before{content:"— ";color:var(--red)}
+.q{background:#fff;border:1px solid var(--line);border-radius:22px;padding:32px}
+.q .m{font-family:Sora;font-size:44px;color:var(--red);line-height:.6}.q p{font-size:17px;line-height:1.6;margin:14px 0 22px}
+.q b{font-family:Sora;font-size:15px}.q small{display:block;color:var(--mut);font-size:13px;margin-top:2px}
+/* schedule */
+.sc{background:#fff;border:1px solid var(--line);border-radius:24px;margin-top:44px;overflow:hidden}
+.r{display:grid;grid-template-columns:150px 1fr 150px 250px 150px;gap:20px;align-items:center;padding:24px 32px;border-bottom:1px solid var(--line)}
+.r:last-child{border:0}.r .dt{font-family:Sora;font-weight:700;font-size:17px}.r h4{font-size:18px}.r small{color:var(--mut);font-size:14px}
+.r .pr{font-family:Sora;font-weight:700;white-space:nowrap}.r .pr s{font-weight:400;color:var(--mut);font-size:13px;margin-right:6px}
+.r .btn{padding:12px 0;text-align:center;font-size:14px;box-shadow:none}
+.pill{font-size:12px;font-weight:600;background:#fdebed;color:var(--red);border-radius:99px;padding:4px 10px;margin-left:8px;font-family:Inter}
+.final{background:var(--red);color:#fff;text-align:center;padding:90px 0}.final h2{margin:0 auto;font-size:48px}.final p{margin:16px 0 32px;font-size:18px;color:#ffd6db}
+.final .btn{background:#fff;color:var(--red)}
+footer{background:var(--dark);color:#8f8798;font-size:14px;padding:34px 0}footer .w{display:flex;justify-content:space-between}
+</style></head><body>
+<div class="bar">Early Bird Discount — investasi pelatihan mulai dari <b>Rp 1.500.000</b> untuk pendaftar awal</div>
+<header><div class="w">
+  <div class="logo">HIPNOTIS<i>.NET</i><small>Yan Nurindra School of Hypnotism</small></div>
+  <nav><span>Tentang Kami</span><span>Program</span><span>Pengajar</span><span>Alumni</span><span>Galeri</span><span>Artikel</span><span class="btn red">Daftar Sekarang</span></nav>
+</div></header>
+
+<div class="hero"><div class="w">
+  <div>
+    <div class="eyebrow">Pelopor pelatihan hipnoterapi modern · Sejak 2002</div>
+    <h1>Kuasai <span>Hipnosis &amp; Hipnoterapi</span> lebih cepat, dengan cara yang benar.</h1>
+    <p>Pelajari cara kerja pikiran bawah sadar lewat sistem modular yang ringkas dan praktis — untuk pengembangan diri maupun karier baru.</p>
+    <div class="cta"><span class="btn red">Lihat Jadwal &amp; Daftar</span><span class="btn line">Konsultasi via WhatsApp</span></div>
+    <div class="trust"><span>Garansi uang kembali 100%</span><span>Gratis mengulang kelas</span><span>Bimbingan pasca pelatihan</span></div>
+  </div>
+  <div class="visual"><div class="photo">FOTO SUASANA KELAS</div><div class="chip">Sistem Modular</div>
+    <div class="badge"><div class="c">100%</div><div><b>Money Back Guarantee</b><small>Tanpa pertanyaan apa pun</small></div></div></div>
+</div></div>
+
+<section class="dark"><div class="w">
+  <div class="eyebrow" style="color:var(--yel)">Peluang Karier</div>
+  <h2>Empat profesi yang terbuka setelah Anda menguasainya</h2>
+  <p class="sub">Kisaran honor wajar di Indonesia untuk tiap profesi.</p>
+  <div class="g4">
+    <div class="car"><div class="ic">01</div><h4>Hypnotherapist</h4><p>Membantu klien mengatasi hambatan mental dan emosional.</p><div class="amt">Per sesi 60–120 menit<b>Rp 300 rb – 3 jt</b></div></div>
+    <div class="car"><div class="ic">02</div><h4>Stage Hypnotist</h4><p>Profesi hiburan di panggung, seperti magician.</p><div class="amt">Per pertunjukan 30–60 menit<b>Rp 2 jt – 30 jt</b></div></div>
+    <div class="car"><div class="ic">03</div><h4>Trainer</h4><p>Mengajarkan pengetahuan hipnosis dan hipnoterapi.</p><div class="amt">Omzet per bulan<b>Rp 10 jt – 250 jt</b></div></div>
+    <div class="car"><div class="ic">04</div><h4>Public Speaker</h4><p>Pembicara untuk perusahaan dan seminar.</p><div class="amt">Per sesi 90–120 menit<b>Rp 5 jt – 40 jt</b></div></div>
+  </div>
+</div></section>
+
+<section><div class="w ben">
+  <div>
+    <div class="eyebrow">Kenapa belajar di sini</div>
+    <h2>5 benefit untuk setiap peserta</h2>
+    <p class="sub">Kami sudah mengajar berbagai profesi dan kalangan sejak 2002, jauh sebelum hipnoterapi dikenal luas.</p>
+    <div class="guar"><b>Tidak puas? Uang Anda kembali 100%.</b><p>Berlaku untuk kelas Basic Hypnotherapy, atas ketidakpuasan dalam bentuk apa pun, tanpa pertanyaan.</p></div>
+  </div>
+  <div class="bl">
+    <div class="bi"><span class="n">1</span><div><b>Early Bird Discount</b><small>Investasi mulai Rp 1.500.000 bagi pendaftar awal.</small></div></div>
+    <div class="bi"><span class="n">2</span><div><b>Bayar dengan kartu kredit</b><small>Tersedia mesin EDC Visa dan Mastercard.</small></div></div>
+    <div class="bi"><span class="n">3</span><div><b>Bimbingan pasca pelatihan</b><small>Alumni dibimbing berkelanjutan lewat media digital.</small></div></div>
+    <div class="bi"><span class="n">4</span><div><b>Gratis mengulang kelas</b><small>Free Re-Seat kapan pun, di kota mana pun.</small></div></div>
+    <div class="bi"><span class="n">5</span><div><b>100% Money Back Guarantee</b><small>Jaminan kepuasan untuk kelas pertama Anda.</small></div></div>
+  </div>
+</div></section>
+
+<section style="padding-top:0"><div class="w">
+  <div class="eyebrow">Tim Pengajar &amp; Testimoni</div><h2>Belajar langsung dari praktisi berpengalaman</h2>
+  <div class="g2">
+    <div class="tc"><div class="p">FOTO</div><div><h4>Sydney Panjiagung</h4><ul><li>President IBH</li><li>12 tahun sebagai Hypnotherapist &amp; Trainer</li><li>Co-Founder NeoNLP Society</li></ul></div></div>
+    <div class="tc"><div class="p">FOTO</div><div><h4>Juli Sugianto</h4><ul><li>Certified Instructor IBH</li><li>Ketua IBH Chapter Jakarta</li><li>Master Trainer NNLP Society</li></ul></div></div>
+    <div class="q"><div class="m">“</div><p>Menyaksikannya beraksi bagaikan melihat suatu aliran sungai yang sangat indah!</p><b>Ronny F. Ronodirdjo</b><small>NLP Trainer, Jakarta</small></div>
+    <div class="q"><div class="m">“</div><p>Tempat kutipan testimoni alumni berikutnya, diambil dari halaman testimoni yang sudah ada.</p><b>Nama Alumni</b><small>Profesi, Kota</small></div>
+  </div>
+</div></section>
+
+<section style="padding-top:0"><div class="w">
+  <div class="eyebrow">Jadwal Pelatihan</div><h2>Pilih kelas terdekat di kota Anda</h2>
+  <div class="sc">
+    <div class="r"><span class="dt">13–14 Des</span><div><h4>Basic Hypnotherapy <span class="pill">Early Bird</span></h4><small>Kelas pertama · Bergaransi uang kembali</small></div><small>Jakarta</small><span class="pr"><s>Harga normal</s>Rp 1.500.000</span><span class="btn red">Daftar</span></div>
+    <div class="r"><span class="dt">20–21 Des</span><div><h4>Advanced Hypnotherapy</h4><small>Lanjutan untuk alumni kelas Basic</small></div><small>Surabaya</small><span class="pr">Lihat detail</span><span class="btn line">Daftar</span></div>
+    <div class="r"><span class="dt">10–11 Jan</span><div><h4>Basic Hypnotherapy <span class="pill">Early Bird</span></h4><small>Kelas pertama · Bergaransi uang kembali</small></div><small>Bandung</small><span class="pr"><s>Harga normal</s>Rp 1.500.000</span><span class="btn line">Daftar</span></div>
+  </div>
+</div></section>
+
+<div class="final"><div class="w"><h2>Siap memahami pikiran bawah sadar?</h2><p>Daftar sekarang dan dapatkan harga Early Bird.</p><span class="btn">Daftar Sekarang</span></div></div>
+<footer><div class="w"><span>© 2026 Yan Nurindra School of Hypnotism</span><span>Tentang Kami · Clients · Alumni · Galeri Foto · Galeri Video · Artikel</span></div></footer>
+</body></html>

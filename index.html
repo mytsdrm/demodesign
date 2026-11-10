@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Demo Usulan Desain — Redesign Empat Website</title>
+<meta name="robots" content="noindex">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#14213d;--red:#c8202f;--gold:#b8904a;--ink:#1f2937;--mut:#5f6880;--line:#e2e6ee;--bg:#f5f6f9}
+*{box-sizing:border-box;margin:0}
+body{font-family:Inter,system-ui,sans-serif;color:var(--ink);background:var(--bg);-webkit-font-smoothing:antialiased}
+.w{max-width:1120px;margin:0 auto;padding:0 20px}
+header{background:var(--navy);color:#fff;padding:64px 0 96px}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#e9c98b}
+h1{font-size:clamp(32px,5vw,52px);line-height:1.08;letter-spacing:-.02em;margin:14px 0 16px;font-weight:800}
+header p{font-size:17px;line-height:1.6;color:#c9d1e3;max-width:620px}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:-56px;padding-bottom:56px}
+a.card{display:block;background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;text-decoration:none;color:inherit;box-shadow:0 10px 28px rgba(20,33,61,.08);transition:transform .15s,box-shadow .15s}
+a.card:hover{transform:translateY(-3px);box-shadow:0 18px 40px rgba(20,33,61,.14)}
+.card img{display:block;width:100%;aspect-ratio:1440/830;object-fit:cover;object-position:top;border-bottom:1px solid var(--line)}
+.body{padding:22px 24px 24px}
+.n{font-size:12px;font-weight:700;letter-spacing:.14em;color:var(--gold)}
+h2{font-size:22px;letter-spacing:-.01em;margin:6px 0 6px}
+.body p{font-size:15px;line-height:1.55;color:var(--mut)}
+.go{display:inline-block;margin-top:16px;font-weight:700;font-size:14px;color:var(--red)}
+.note{background:#fff;border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:10px;padding:18px 22px;font-size:14px;line-height:1.6;color:var(--mut);margin-bottom:56px}
+footer{border-top:1px solid var(--line);padding:24px 0;font-size:13px;color:var(--mut);text-align:center}
+@media(max-width:720px){.grid{grid-template-columns:1fr}header{padding:44px 0 84px}}
+</style></head><body>
+<header><div class="w">
+  <div class="eyebrow">Demo usulan desain</div>
+  <h1>Redesign Empat Website</h1>
+  <p>Pilih salah satu website di bawah untuk melihat usulan tampilan halaman depannya secara utuh.</p>
+</div></header>
+<div class="w">
+  <div class="grid">
+    <a class="card" href="ibh.html"><img src="img/ibh.jpg" alt="Usulan desain IBH Center"><div class="body"><div class="n">01</div><h2>IBH Center</h2><p>Resmi dan terpercaya, dengan pencarian hipnoterapis bersertifikat di layar pertama.</p><span class="go">Lihat desain →</span></div></a>
+    <a class="card" href="hipnotis.html"><img src="img/hipnotis.jpg" alt="Usulan desain Hipnotis.net"><div class="body"><div class="n">02</div><h2>Hipnotis.net</h2><p>Halaman penjualan pelatihan yang ringkas, dengan tombol Daftar yang selalu terlihat.</p><span class="go">Lihat desain →</span></div></a>
+    <a class="card" href="nca.html"><img src="img/nca.jpg" alt="Usulan desain NCA Center"><div class="body"><div class="n">03</div><h2>NCA Center</h2><p>Ramah dan mengajak, untuk yang ingin menjadi coach maupun yang mencari coach.</p><span class="go">Lihat desain →</span></div></a>
+    <a class="card" href="neonlp.html"><img src="img/neonlp.jpg" alt="Usulan desain NeoNLP"><div class="body"><div class="n">04</div><h2>NeoNLP</h2><p>Pusat pengetahuan NLP dengan pustaka artikel dan direktori praktisi serta trainer.</p><span class="go">Lihat desain →</span></div></a>
+  </div>
+  <div class="note"><b style="color:var(--ink)">Catatan.</b> Ini adalah contoh tampilan, bukan website yang sudah jadi. Tombol dan menu belum berfungsi. Nama, tanggal, dan foto hanya contoh dan akan diganti dengan data asli. Paling nyaman dilihat di layar komputer.</div>
+</div>
+<footer><div class="w">Demo usulan desain · November 2026</div></footer>
+</body></html>
